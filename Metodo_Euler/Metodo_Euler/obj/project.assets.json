@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\maria\\.nuget\\packages\\": {}
+    "C:\\Users\\Kaby\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documentos\\5\\Materias\\Matematicas para Ingenieria II\\3\\Proyecto Euler\\Metodo-Euler-C-\\Metodo_Euler\\Metodo_Euler\\Metodo_Euler.csproj",
+      "projectUniqueName": "F:\\Documents\\UPP\\5to Cuatrimestre\\Matemáticas para Ingeniería II\\Metodo-Euler-C-\\Metodo_Euler\\Metodo_Euler\\Metodo_Euler.csproj",
       "projectName": "Metodo_Euler",
-      "projectPath": "D:\\Documentos\\5\\Materias\\Matematicas para Ingenieria II\\3\\Proyecto Euler\\Metodo-Euler-C-\\Metodo_Euler\\Metodo_Euler\\Metodo_Euler.csproj",
-      "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-      "outputPath": "D:\\Documentos\\5\\Materias\\Matematicas para Ingenieria II\\3\\Proyecto Euler\\Metodo-Euler-C-\\Metodo_Euler\\Metodo_Euler\\obj\\",
+      "projectPath": "F:\\Documents\\UPP\\5to Cuatrimestre\\Matemáticas para Ingeniería II\\Metodo-Euler-C-\\Metodo_Euler\\Metodo_Euler\\Metodo_Euler.csproj",
+      "packagesPath": "C:\\Users\\Kaby\\.nuget\\packages\\",
+      "outputPath": "F:\\Documents\\UPP\\5to Cuatrimestre\\Matemáticas para Ingeniería II\\Metodo-Euler-C-\\Metodo_Euler\\Metodo_Euler\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Kaby\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
