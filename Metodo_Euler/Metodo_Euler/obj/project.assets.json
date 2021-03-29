@@ -8,19 +8,24 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Kaby\\.nuget\\packages\\": {}
+    "C:\\Users\\PatitosGaming-1\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Documents\\UPP\\5to Cuatrimestre\\Matemáticas para Ingeniería II\\Metodo-Euler-C-\\Metodo_Euler\\Metodo_Euler\\Metodo_Euler.csproj",
+      "projectUniqueName": "C:\\Users\\PatitosGaming-1\\Documents\\UPP\\5to Cuatri\\Proyectos\\Euler\\Metodo-Euler-C-\\Metodo_Euler\\Metodo_Euler\\Metodo_Euler.csproj",
       "projectName": "Metodo_Euler",
-      "projectPath": "F:\\Documents\\UPP\\5to Cuatrimestre\\Matemáticas para Ingeniería II\\Metodo-Euler-C-\\Metodo_Euler\\Metodo_Euler\\Metodo_Euler.csproj",
-      "packagesPath": "C:\\Users\\Kaby\\.nuget\\packages\\",
-      "outputPath": "F:\\Documents\\UPP\\5to Cuatrimestre\\Matemáticas para Ingeniería II\\Metodo-Euler-C-\\Metodo_Euler\\Metodo_Euler\\obj\\",
+      "projectPath": "C:\\Users\\PatitosGaming-1\\Documents\\UPP\\5to Cuatri\\Proyectos\\Euler\\Metodo-Euler-C-\\Metodo_Euler\\Metodo_Euler\\Metodo_Euler.csproj",
+      "packagesPath": "C:\\Users\\PatitosGaming-1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\PatitosGaming-1\\Documents\\UPP\\5to Cuatri\\Proyectos\\Euler\\Metodo-Euler-C-\\Metodo_Euler\\Metodo_Euler\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Kaby\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\PatitosGaming-1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
