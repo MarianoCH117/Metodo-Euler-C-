@@ -76,7 +76,8 @@ namespace Metodo_Euler
 
         private void btnCalcularEuler_Click(object sender, EventArgs e)
         {
-            if(txtH.Text == "" || txtMaxX.Text == "" || txtXo.Text == "" || txtYo.Text == "")
+            this.dgvEuler.Rows.Clear();
+            if (txtH.Text == "" || txtMaxX.Text == "" || txtXo.Text == "" || txtYo.Text == "")
             {
                 DialogResult error = MessageBox.Show("Por favor, revise que no haya ninguna caja de texto en blanco.", "Error de datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
