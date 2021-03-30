@@ -99,7 +99,12 @@ namespace Metodo_Euler
                 porcentajes = Math.Abs(((ecuacion - y) / ecuacion) * 100);
                 //Console.Write("Porcentaje: ");
                 //Console.WriteLine("{0:N1}", +Math.Abs(porcentajes));
-                dgvEuler.Rows.Add(Convert.ToString(contador),Convert.ToString(xn),Convert.ToString(ecuacion),Convert.ToString(y),Convert.ToString(porcentajes));
+                dgvEuler.Rows.Add(
+                    Convert.ToString(contador),
+                    Convert.ToString(Math.Round(xn, 7)),
+                    Convert.ToString(Math.Round(ecuacion, 7)),
+                    Convert.ToString(Math.Round(y, 7)),
+                    Convert.ToString(Math.Round(porcentajes, 7)) + "%");
                 contador++;
             }
         }
