@@ -174,6 +174,7 @@ namespace Metodo_Euler
             this.txtXo.Name = "txtXo";
             this.txtXo.Size = new System.Drawing.Size(100, 25);
             this.txtXo.TabIndex = 8;
+            this.txtXo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtXo_KeyPress);
             // 
             // txtYo
             // 
@@ -182,6 +183,7 @@ namespace Metodo_Euler
             this.txtYo.Name = "txtYo";
             this.txtYo.Size = new System.Drawing.Size(100, 25);
             this.txtYo.TabIndex = 9;
+            this.txtYo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYo_KeyPress);
             // 
             // txtMaxX
             // 
@@ -191,6 +193,7 @@ namespace Metodo_Euler
             this.txtMaxX.Size = new System.Drawing.Size(100, 25);
             this.txtMaxX.TabIndex = 10;
             this.txtMaxX.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtMaxX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaxX_KeyPress);
             // 
             // txtH
             // 
@@ -199,6 +202,7 @@ namespace Metodo_Euler
             this.txtH.Name = "txtH";
             this.txtH.Size = new System.Drawing.Size(100, 25);
             this.txtH.TabIndex = 11;
+            this.txtH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtH_KeyPress);
             // 
             // pictureBox2
             // 
