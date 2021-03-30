@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace Metodo_Euler
 {
@@ -75,12 +76,15 @@ namespace Metodo_Euler
 
         private void btnCalcularEuler_Click(object sender, EventArgs e)
         {
-            double xn = 0;
-            double yn = 4;
+            double xn = double.Parse(txtXo.Text);
+            double yn = double.Parse(txtYo.Text);
             double h = 0;
             double y = 0;
-            double tope = 2f;
+            double tope = double.Parse(txtMaxX.Text);
+            
+            
             int contador = 0;
+
 
             while (xn < tope)
             {
@@ -91,7 +95,8 @@ namespace Metodo_Euler
                 //Console.Write("Vuelta: " + contador + "El valor de la ecuacion es:");
                 //Console.WriteLine("{0:N6}", y);                
                 xn = xn + h;
-                h = 0.25f;
+                label1.Text = Convert.ToString(txtH.Text);
+                h = double.Parse(txtH.Text, CultureInfo.InvariantCulture);
                 yn = y;
                 double ecuacion = Math.Pow((Math.Log((2 * xn) + 1) / 4) + 2, 2);
                 //Console.Write("El valor de la ecuacion chido es :");
