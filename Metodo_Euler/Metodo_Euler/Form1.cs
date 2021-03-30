@@ -76,41 +76,52 @@ namespace Metodo_Euler
 
         private void btnCalcularEuler_Click(object sender, EventArgs e)
         {
-            double xn = double.Parse(txtXo.Text);
-            double yn = double.Parse(txtYo.Text);
-            double h = 0;
-            double y = 0;
-            double tope = double.Parse(txtMaxX.Text);
-            
-            
-            int contador = 0;
-
-
-            while (xn < tope)
+            if(txtH.Text == "" || txtMaxX.Text == "" || txtXo.Text == "" || txtYo.Text == "")
             {
-                double raiz = Math.Sqrt(y);
-                double denominador = (2 * xn) + 1;
-                double porcentajes;
-                y = yn + (h * (raiz / denominador));
-                //Console.Write("Vuelta: " + contador + "El valor de la ecuacion es:");
-                //Console.WriteLine("{0:N6}", y);                
-                xn = xn + h;
-                label1.Text = Convert.ToString(txtH.Text);
-                h = double.Parse(txtH.Text, CultureInfo.InvariantCulture);
-                yn = y;
-                double ecuacion = Math.Pow((Math.Log((2 * xn) + 1) / 4) + 2, 2);
-                //Console.Write("El valor de la ecuacion chido es :");
-                //Console.WriteLine("{0:N6}", ecuacion);
-                porcentajes = Math.Abs(((ecuacion - y) / ecuacion) * 100);
-                //Console.Write("Porcentaje: ");
-                //Console.WriteLine("{0:N1}", +Math.Abs(porcentajes));
-                dgvEuler.Rows.Add(
-                    Convert.ToString(contador),
-                    Convert.ToString(Math.Round(xn, 7)),
-                    Convert.ToString(Math.Round(ecuacion, 7)),
-                    Convert.ToString(Math.Round(y, 7)),
-                    Convert.ToString(Math.Round(porcentajes, 7)) + "%");
-                contador++;
+                DialogResult error = MessageBox.Show("Por favor, revise que no haya ninguna caja de texto en blanco.", "Error de datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                double xn = 0, yn = 4, h = 0, y = 0, tope = 2;
+                int contador = 0;
+                try
+                {
+                    xn = double.Parse(txtXo.Text);
+                    yn = double.Parse(txtYo.Text);
+                    h = 0;
+                    y = 0;
+                    tope = double.Parse(txtMaxX.Text);
+
+                    while (xn < tope)
+                    {
+                        double raiz = Math.Sqrt(y);
+                        double denominador = (2 * xn) + 1;
+                        double porcentajes;
+                        y = yn + (h * (raiz / denominador));
+                        //Console.Write("Vuelta: " + contador + "El valor de la ecuacion es:");
+                        //Console.WriteLine("{0:N6}", y);                
+                        xn = xn + h;
+                        h = double.Parse(txtH.Text, CultureInfo.InvariantCulture);
+                        yn = y;
+                        double ecuacion = Math.Pow((Math.Log((2 * xn) + 1) / 4) + 2, 2);
+                        //Console.Write("El valor de la ecuacion chido es :");
+                        //Console.WriteLine("{0:N6}", ecuacion);
+                        porcentajes = Math.Abs(((ecuacion - y) / ecuacion) * 100);
+                        //Console.Write("Porcentaje: ");
+                        //Console.WriteLine("{0:N1}", +Math.Abs(porcentajes));
+                        dgvEuler.Rows.Add(
+                            Convert.ToString(contador),
+                            Convert.ToString(Math.Round(xn, 6)),
+                            Convert.ToString(Math.Round(ecuacion, 6)),
+                            Convert.ToString(Math.Round(y, 6)),
+                            Convert.ToString(Math.Round(porcentajes, 6)) + "%");
+                        contador++;
+                    }
+                }
+                catch (FormatException)
+                {
+                    DialogResult error = MessageBox.Show("Error en el formato de los datos introducidos. Por favor, introduzca sólo números.", "Error de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
