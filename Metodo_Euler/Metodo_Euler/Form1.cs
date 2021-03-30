@@ -76,6 +76,7 @@ namespace Metodo_Euler
 
         private void btnCalcularEuler_Click(object sender, EventArgs e)
         {
+            this.dgvEuler.Rows.Clear();
             double xn = double.Parse(txtXo.Text);
             double yn = double.Parse(txtYo.Text);
             double h = 0;
