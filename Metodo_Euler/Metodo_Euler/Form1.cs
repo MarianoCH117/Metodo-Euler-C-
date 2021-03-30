@@ -82,21 +82,33 @@ namespace Metodo_Euler
         private void txtMaxX_KeyPress(object sender, KeyPressEventArgs e)
         {
             checarDatosIntroducidos(sender, e);
+            llamarCalculoConEnter(e);
         }
 
         private void txtXo_KeyPress(object sender, KeyPressEventArgs e)
         {
             checarDatosIntroducidos(sender, e);
+            llamarCalculoConEnter(e);
         }
 
         private void txtYo_KeyPress(object sender, KeyPressEventArgs e)
         {
             checarDatosIntroducidos(sender, e);
+            llamarCalculoConEnter(e);
         }
 
         private void txtH_KeyPress(object sender, KeyPressEventArgs e)
         {
             checarDatosIntroducidos(sender, e);
+            llamarCalculoConEnter(e);
+        }
+        private void llamarCalculoConEnter(KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                calcularEuler();
+                e.Handled = true;
+            }
         }
         private void checarDatosIntroducidos(object sender, KeyPressEventArgs e)
         {
