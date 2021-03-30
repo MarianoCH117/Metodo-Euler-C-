@@ -12,6 +12,8 @@ namespace Metodo_Euler
 {
     public partial class Form1 : Form
     {
+        
+
         public Form1()
         {
             InitializeComponent();
@@ -28,7 +30,6 @@ namespace Metodo_Euler
             c1.HeaderText = "Iteracion";
             c1.Width = 100;
             c1.ReadOnly = true;
-
             dgvEuler.Columns.Add(c1);
         }
 
@@ -49,6 +50,35 @@ namespace Metodo_Euler
 
         private void btnCalcularEuler_Click(object sender, EventArgs e)
         {
+            double xn = 0;
+            double yn = 4;
+            double h = 0;
+            double y = 0;
+            double tope = 2f;
+            int contador = 0;
+
+            while (xn < tope)
+            {
+                double raiz = Math.Sqrt(y);
+                double denominador = (2 * xn) + 1;
+                double porcentajes;
+                y = yn + (h * (raiz / denominador));
+                //Console.Write("Vuelta: " + contador + "El valor de la ecuacion es:");
+                //Console.WriteLine("{0:N6}", y);
+                contador++;
+                xn = xn + h;
+                h = 0.25f;
+                yn = y;
+                double ecuacion = Math.Pow((Math.Log((2 * xn) + 1) / 4) + 2, 2);
+                //Console.Write("El valor de la ecuacion chido es :");
+                //Console.WriteLine("{0:N6}", ecuacion);
+                porcentajes = ((ecuacion - y) / ecuacion) * 100;
+                //Console.Write("Porcentaje: ");
+                //Console.WriteLine("{0:N1}", +Math.Abs(porcentajes));
+                dgvEuler.Rows.Add(contador);
+            }
+
+            
 
         }
     }
