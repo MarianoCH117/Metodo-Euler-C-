@@ -75,7 +75,7 @@ namespace Metodo_Euler
                 porcentajes = ((ecuacion - y) / ecuacion) * 100;
                 //Console.Write("Porcentaje: ");
                 //Console.WriteLine("{0:N1}", +Math.Abs(porcentajes));
-                dgvEuler.Rows.Add(contador);
+                dgvEuler.Rows.Add(Convert.ToString(contador));
             }
 
             
