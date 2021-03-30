@@ -122,8 +122,9 @@ namespace Metodo_Euler
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(217, 58);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(571, 78);
+            this.label3.Size = new System.Drawing.Size(926, 78);
             this.label3.TabIndex = 3;
+            this.label3.Text = resources.GetString("label3.Text");
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
