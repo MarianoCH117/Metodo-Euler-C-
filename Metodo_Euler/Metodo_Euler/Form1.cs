@@ -77,9 +77,6 @@ namespace Metodo_Euler
                 //Console.WriteLine("{0:N1}", +Math.Abs(porcentajes));
                 dgvEuler.Rows.Add(contador);
             }
-
-            
-
         }
     }
 }
