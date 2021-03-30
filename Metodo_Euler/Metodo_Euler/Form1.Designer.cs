@@ -258,6 +258,8 @@ namespace Metodo_Euler
             // 
             // dgvEuler
             // 
+            this.dgvEuler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvEuler.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvEuler.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvEuler.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEuler.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -272,13 +274,13 @@ namespace Metodo_Euler
             this.dgvEuler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEuler.EnableHeadersVisualStyles = false;
             this.dgvEuler.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(117)))), ((int)(((byte)(128)))));
-            this.dgvEuler.Location = new System.Drawing.Point(727, 303);
+            this.dgvEuler.Location = new System.Drawing.Point(752, 303);
             this.dgvEuler.Name = "dgvEuler";
             this.dgvEuler.RowHeadersVisible = false;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
             this.dgvEuler.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEuler.RowTemplate.Height = 25;
-            this.dgvEuler.Size = new System.Drawing.Size(427, 174);
+            this.dgvEuler.Size = new System.Drawing.Size(360, 174);
             this.dgvEuler.TabIndex = 17;
             this.dgvEuler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEuler_CellContentClick);
             // 
