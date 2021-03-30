@@ -1360,7 +1360,7 @@ Fecha de entrega:
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>En matemática y computación, el método de Euler, llamado así en honor de Leonhard Euler, es un procedimiento de integración numérica para resolver ecuaciones diferenciales ordinarias a partir de un valor inicial dado. 
-El método de Euler es un método de primer orden, lo que significa que el error local es proporcional al cuadrado del tamaño del paso, y el error global es proporcionar al tamaño del paso </value>
+El método de Euler es un método de primer orden, lo que significa que el error local es proporcional al cuadrado del tamaño del paso, y el error global es proporcionar al tamaño del paso.</value>
   </data>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

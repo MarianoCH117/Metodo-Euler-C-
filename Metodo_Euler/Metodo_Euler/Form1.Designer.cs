@@ -29,10 +29,11 @@ namespace Metodo_Euler
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblDatos = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -52,7 +53,6 @@ namespace Metodo_Euler
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnCalcularEuler = new System.Windows.Forms.Button();
             this.dgvEuler = new System.Windows.Forms.DataGridView();
-            this.lblDatos = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -74,6 +74,15 @@ namespace Metodo_Euler
             this.groupBox1.Size = new System.Drawing.Size(213, 763);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // lblDatos
+            // 
+            this.lblDatos.AutoSize = true;
+            this.lblDatos.Location = new System.Drawing.Point(6, 178);
+            this.lblDatos.Name = "lblDatos";
+            this.lblDatos.Size = new System.Drawing.Size(207, 315);
+            this.lblDatos.TabIndex = 18;
+            this.lblDatos.Text = resources.GetString("lblDatos.Text");
             // 
             // label2
             // 
@@ -126,7 +135,7 @@ namespace Metodo_Euler
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(217, 58);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(926, 78);
+            this.label3.Size = new System.Drawing.Size(926, 104);
             this.label3.TabIndex = 3;
             this.label3.Text = resources.GetString("label3.Text");
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -289,15 +298,6 @@ namespace Metodo_Euler
             this.dgvEuler.Size = new System.Drawing.Size(360, 174);
             this.dgvEuler.TabIndex = 17;
             this.dgvEuler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEuler_CellContentClick);
-            // 
-            // lblDatos
-            // 
-            this.lblDatos.AutoSize = true;
-            this.lblDatos.Location = new System.Drawing.Point(6, 178);
-            this.lblDatos.Name = "lblDatos";
-            this.lblDatos.Size = new System.Drawing.Size(207, 315);
-            this.lblDatos.TabIndex = 18;
-            this.lblDatos.Text = resources.GetString("lblDatos.Text");
             // 
             // Form1
             // 
