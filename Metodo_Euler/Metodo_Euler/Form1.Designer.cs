@@ -49,12 +49,14 @@ namespace Metodo_Euler
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnCalcularEuler = new System.Windows.Forms.Button();
+            this.dgvEuler = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEuler)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -65,7 +67,7 @@ namespace Metodo_Euler
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Location = new System.Drawing.Point(-2, -13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(213, 719);
+            this.groupBox1.Size = new System.Drawing.Size(213, 763);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -249,12 +251,24 @@ namespace Metodo_Euler
             this.btnCalcularEuler.TabIndex = 16;
             this.btnCalcularEuler.Text = "Calcular";
             this.btnCalcularEuler.UseVisualStyleBackColor = false;
+            this.btnCalcularEuler.Click += new System.EventHandler(this.btnCalcularEuler_Click);
+            // 
+            // dgvEuler
+            // 
+            this.dgvEuler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEuler.Location = new System.Drawing.Point(232, 531);
+            this.dgvEuler.Name = "dgvEuler";
+            this.dgvEuler.RowTemplate.Height = 25;
+            this.dgvEuler.Size = new System.Drawing.Size(453, 174);
+            this.dgvEuler.TabIndex = 17;
+            this.dgvEuler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEuler_CellContentClick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 703);
+            this.ClientSize = new System.Drawing.Size(800, 746);
+            this.Controls.Add(this.dgvEuler);
             this.Controls.Add(this.btnCalcularEuler);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -271,7 +285,7 @@ namespace Metodo_Euler
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -281,6 +295,7 @@ namespace Metodo_Euler
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEuler)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,6 +322,7 @@ namespace Metodo_Euler
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btnCalcularEuler;
+        private System.Windows.Forms.DataGridView dgvEuler;
     }
 }
 
