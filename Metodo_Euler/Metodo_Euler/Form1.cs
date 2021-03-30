@@ -76,6 +76,43 @@ namespace Metodo_Euler
 
         private void btnCalcularEuler_Click(object sender, EventArgs e)
         {
+            calcularEuler();
+        }
+
+        private void txtMaxX_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            checarDatosIntroducidos(sender, e);
+        }
+
+        private void txtXo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            checarDatosIntroducidos(sender, e);
+        }
+
+        private void txtYo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            checarDatosIntroducidos(sender, e);
+        }
+
+        private void txtH_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            checarDatosIntroducidos(sender, e);
+        }
+        private void checarDatosIntroducidos(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // Sólo permite un punto decimal.
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+        private void calcularEuler()
+        {
             this.dgvEuler.Rows.Clear();
             if (txtH.Text == "" || txtMaxX.Text == "" || txtXo.Text == "" || txtYo.Text == "")
             {
