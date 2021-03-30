@@ -155,10 +155,10 @@ namespace Metodo_Euler
                         porcentajes = Math.Abs(((ecuacion - y) / ecuacion) * 100);
                         dgvEuler.Rows.Add(
                             Convert.ToString(contador),
-                            Convert.ToString(Math.Round(xn, 6)),
-                            Convert.ToString(Math.Round(ecuacion, 6)),
-                            Convert.ToString(Math.Round(y, 6)),
-                            Convert.ToString(Math.Round(porcentajes, 6)) + "%");
+                            Convert.ToString(Math.Round(xn, 6, MidpointRounding.AwayFromZero)),
+                            Convert.ToString(Math.Round(ecuacion, 6, MidpointRounding.AwayFromZero)),
+                            Convert.ToString(Math.Round(y, 6, MidpointRounding.AwayFromZero)),
+                            Convert.ToString(Math.Round(porcentajes, 6, MidpointRounding.AwayFromZero)) + "%");
                         contador++;
                     }
                 }
