@@ -130,7 +130,7 @@ namespace Metodo_Euler
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(232, 387);
+            this.label4.Location = new System.Drawing.Point(232, 306);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 19);
             this.label4.TabIndex = 4;
@@ -140,7 +140,7 @@ namespace Metodo_Euler
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(232, 428);
+            this.label5.Location = new System.Drawing.Point(232, 347);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 19);
             this.label5.TabIndex = 5;
@@ -150,7 +150,7 @@ namespace Metodo_Euler
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(473, 387);
+            this.label6.Location = new System.Drawing.Point(473, 306);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(108, 19);
             this.label6.TabIndex = 6;
@@ -160,7 +160,7 @@ namespace Metodo_Euler
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(475, 431);
+            this.label7.Location = new System.Drawing.Point(475, 350);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 19);
             this.label7.TabIndex = 7;
@@ -169,7 +169,7 @@ namespace Metodo_Euler
             // txtXo
             // 
             this.txtXo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtXo.Location = new System.Drawing.Point(305, 384);
+            this.txtXo.Location = new System.Drawing.Point(305, 303);
             this.txtXo.Name = "txtXo";
             this.txtXo.Size = new System.Drawing.Size(100, 25);
             this.txtXo.TabIndex = 8;
@@ -177,7 +177,7 @@ namespace Metodo_Euler
             // txtYo
             // 
             this.txtYo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtYo.Location = new System.Drawing.Point(304, 425);
+            this.txtYo.Location = new System.Drawing.Point(304, 344);
             this.txtYo.Name = "txtYo";
             this.txtYo.Size = new System.Drawing.Size(100, 25);
             this.txtYo.TabIndex = 9;
@@ -185,7 +185,7 @@ namespace Metodo_Euler
             // txtMaxX
             // 
             this.txtMaxX.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtMaxX.Location = new System.Drawing.Point(585, 384);
+            this.txtMaxX.Location = new System.Drawing.Point(585, 303);
             this.txtMaxX.Name = "txtMaxX";
             this.txtMaxX.Size = new System.Drawing.Size(100, 25);
             this.txtMaxX.TabIndex = 10;
@@ -194,7 +194,7 @@ namespace Metodo_Euler
             // txtH
             // 
             this.txtH.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtH.Location = new System.Drawing.Point(585, 428);
+            this.txtH.Location = new System.Drawing.Point(585, 347);
             this.txtH.Name = "txtH";
             this.txtH.Size = new System.Drawing.Size(100, 25);
             this.txtH.TabIndex = 11;
@@ -222,7 +222,7 @@ namespace Metodo_Euler
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(232, 278);
+            this.pictureBox4.Location = new System.Drawing.Point(716, 179);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(200, 78);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -232,7 +232,7 @@ namespace Metodo_Euler
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(475, 278);
+            this.pictureBox5.Location = new System.Drawing.Point(943, 179);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(200, 78);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -245,7 +245,7 @@ namespace Metodo_Euler
             this.btnCalcularEuler.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(176)))), ((int)(((byte)(191)))));
             this.btnCalcularEuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalcularEuler.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCalcularEuler.Location = new System.Drawing.Point(585, 479);
+            this.btnCalcularEuler.Location = new System.Drawing.Point(585, 408);
             this.btnCalcularEuler.Name = "btnCalcularEuler";
             this.btnCalcularEuler.Size = new System.Drawing.Size(100, 34);
             this.btnCalcularEuler.TabIndex = 16;
@@ -256,10 +256,10 @@ namespace Metodo_Euler
             // dgvEuler
             // 
             this.dgvEuler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEuler.Location = new System.Drawing.Point(232, 531);
+            this.dgvEuler.Location = new System.Drawing.Point(716, 303);
             this.dgvEuler.Name = "dgvEuler";
             this.dgvEuler.RowTemplate.Height = 25;
-            this.dgvEuler.Size = new System.Drawing.Size(453, 174);
+            this.dgvEuler.Size = new System.Drawing.Size(427, 174);
             this.dgvEuler.TabIndex = 17;
             this.dgvEuler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEuler_CellContentClick);
             // 
@@ -267,7 +267,7 @@ namespace Metodo_Euler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 746);
+            this.ClientSize = new System.Drawing.Size(1166, 503);
             this.Controls.Add(this.dgvEuler);
             this.Controls.Add(this.btnCalcularEuler);
             this.Controls.Add(this.pictureBox5);
