@@ -148,17 +148,11 @@ namespace Metodo_Euler
                         double denominador = (2 * xn) + 1;
                         double porcentajes;
                         y = yn + (h * (raiz / denominador));
-                        //Console.Write("Vuelta: " + contador + "El valor de la ecuacion es:");
-                        //Console.WriteLine("{0:N6}", y);                
                         xn = xn + h;
                         h = double.Parse(txtH.Text, CultureInfo.InvariantCulture);
                         yn = y;
                         double ecuacion = Math.Pow((Math.Log((2 * xn) + 1) / 4) + 2, 2);
-                        //Console.Write("El valor de la ecuacion chido es :");
-                        //Console.WriteLine("{0:N6}", ecuacion);
                         porcentajes = Math.Abs(((ecuacion - y) / ecuacion) * 100);
-                        //Console.Write("Porcentaje: ");
-                        //Console.WriteLine("{0:N1}", +Math.Abs(porcentajes));
                         dgvEuler.Rows.Add(
                             Convert.ToString(contador),
                             Convert.ToString(Math.Round(xn, 6)),
