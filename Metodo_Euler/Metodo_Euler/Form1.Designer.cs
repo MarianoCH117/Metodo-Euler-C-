@@ -40,14 +40,15 @@ namespace Metodo_Euler
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtXo = new System.Windows.Forms.TextBox();
+            this.txtYo = new System.Windows.Forms.TextBox();
+            this.txtMaxX = new System.Windows.Forms.TextBox();
+            this.txtH = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.btnCalcularEuler = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -149,9 +150,9 @@ namespace Metodo_Euler
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.Location = new System.Drawing.Point(475, 403);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 19);
+            this.label6.Size = new System.Drawing.Size(108, 19);
             this.label6.TabIndex = 6;
-            this.label6.Text = "Hata que x sea: ";
+            this.label6.Text = "Hasta que x sea:";
             // 
             // label7
             // 
@@ -163,38 +164,38 @@ namespace Metodo_Euler
             this.label7.TabIndex = 7;
             this.label7.Text = "Valor de h: ";
             // 
-            // textBox1
+            // txtXo
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(333, 400);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 25);
-            this.textBox1.TabIndex = 8;
+            this.txtXo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtXo.Location = new System.Drawing.Point(333, 400);
+            this.txtXo.Name = "txtXo";
+            this.txtXo.Size = new System.Drawing.Size(100, 25);
+            this.txtXo.TabIndex = 8;
             // 
-            // textBox2
+            // txtYo
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(332, 441);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 25);
-            this.textBox2.TabIndex = 9;
+            this.txtYo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtYo.Location = new System.Drawing.Point(332, 441);
+            this.txtYo.Name = "txtYo";
+            this.txtYo.Size = new System.Drawing.Size(100, 25);
+            this.txtYo.TabIndex = 9;
             // 
-            // textBox3
+            // txtMaxX
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(587, 400);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 25);
-            this.textBox3.TabIndex = 10;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtMaxX.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtMaxX.Location = new System.Drawing.Point(587, 400);
+            this.txtMaxX.Name = "txtMaxX";
+            this.txtMaxX.Size = new System.Drawing.Size(100, 25);
+            this.txtMaxX.TabIndex = 10;
+            this.txtMaxX.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // textBox4
+            // txtH
             // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox4.Location = new System.Drawing.Point(587, 444);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 25);
-            this.textBox4.TabIndex = 11;
+            this.txtH.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtH.Location = new System.Drawing.Point(587, 444);
+            this.txtH.Name = "txtH";
+            this.txtH.Size = new System.Drawing.Size(100, 25);
+            this.txtH.TabIndex = 11;
             // 
             // pictureBox2
             // 
@@ -236,19 +237,29 @@ namespace Metodo_Euler
             this.pictureBox5.TabIndex = 15;
             this.pictureBox5.TabStop = false;
             // 
+            // btnCalcularEuler
+            // 
+            this.btnCalcularEuler.Location = new System.Drawing.Point(702, 419);
+            this.btnCalcularEuler.Name = "btnCalcularEuler";
+            this.btnCalcularEuler.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcularEuler.TabIndex = 16;
+            this.btnCalcularEuler.Text = "Calcular";
+            this.btnCalcularEuler.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 612);
+            this.Controls.Add(this.btnCalcularEuler);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtH);
+            this.Controls.Add(this.txtMaxX);
+            this.Controls.Add(this.txtYo);
+            this.Controls.Add(this.txtXo);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -283,14 +294,15 @@ namespace Metodo_Euler
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtXo;
+        private System.Windows.Forms.TextBox txtYo;
+        private System.Windows.Forms.TextBox txtMaxX;
+        private System.Windows.Forms.TextBox txtH;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button btnCalcularEuler;
     }
 }
 
