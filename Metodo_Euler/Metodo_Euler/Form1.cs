@@ -64,12 +64,12 @@ namespace Metodo_Euler
             c7.ReadOnly = true;
 
             DataGridViewTextBoxColumn c8 = new DataGridViewTextBoxColumn();
-            c8.HeaderText = "PorcentajeMejorado";
+            c8.HeaderText = "YRungeKutta";
             c8.Width = 80;
             c8.ReadOnly = true;
 
             DataGridViewTextBoxColumn c9 = new DataGridViewTextBoxColumn();
-            c9.HeaderText = "PorcentajeMejorado";
+            c9.HeaderText = "PorcentajeRungeKutta";
             c9.Width = 80;
             c9.ReadOnly = true;
 
@@ -250,11 +250,11 @@ namespace Metodo_Euler
                         denominadorRK = (2 * (x0rk + hrk)) + 1;
                         k4 = raizRK / denominadorRK;                      
                         yrk = y0rk + ((((k1 + (2 * k2) + (2 * k3) + k4)) * hrk) / 6);                      
-                        hrk = 0.25f;
+                        hrk = double.Parse(txtH.Text, CultureInfo.InvariantCulture);
                         x0rk = xnRK;
                         y0rk = yrk;
                         double yrkreal = (double)Math.Pow((Math.Log((2 * xnRK) + 1) / 4) + 2, 2);                        
-                        porcentajesRK = Math.Abs(((Math.Round(yrkreal, 6, MidpointRounding.AwayFromZero) - (Math.Round(yrk, 6, MidpointRounding.AwayFromZero))) / (Math.Round(yrkreal, 6, MidpointRounding.AwayFromZero))) * 100);
+                        porcentajesRK = Math.Abs((yrkreal - yrk) / (yrkreal) * 100);
                         
                        
 
