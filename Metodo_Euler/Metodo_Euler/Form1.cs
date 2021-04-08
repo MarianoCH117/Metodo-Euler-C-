@@ -103,7 +103,7 @@ namespace Metodo_Euler
 
         private void btnCalcularEuler_Click(object sender, EventArgs e)
         {
-            calcularEuler();
+            calcularRungeKutta();
         }
 
         private void txtMaxX_KeyPress(object sender, KeyPressEventArgs e)
@@ -133,7 +133,7 @@ namespace Metodo_Euler
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                calcularEuler();
+                calcularRungeKutta();
                 e.Handled = true;
             }
         }
@@ -151,7 +151,7 @@ namespace Metodo_Euler
             }
         }
 
-        private void calcularEuler()
+        private void calcularRungeKutta()
         {
             this.dgvEuler.Rows.Clear();
             if (txtH.Text == "" || txtMaxX.Text == "" || txtXo.Text == "" || txtYo.Text == "")
