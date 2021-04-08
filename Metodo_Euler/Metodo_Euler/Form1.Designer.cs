@@ -78,7 +78,7 @@ namespace Metodo_Euler
             // lblDatos
             // 
             this.lblDatos.AutoSize = true;
-            this.lblDatos.Location = new System.Drawing.Point(6, 178);
+            this.lblDatos.Location = new System.Drawing.Point(6, 192);
             this.lblDatos.Name = "lblDatos";
             this.lblDatos.Size = new System.Drawing.Size(207, 315);
             this.lblDatos.TabIndex = 18;
@@ -124,9 +124,9 @@ namespace Metodo_Euler
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(217, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 37);
+            this.label1.Size = new System.Drawing.Size(306, 37);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Método de Euler";
+            this.label1.Text = "Método de Runge-Kutta";
             // 
             // label3
             // 
@@ -325,7 +325,7 @@ namespace Metodo_Euler
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Método Numérico de Euler";
+            this.Text = "Método Numérico de Runge-Kutta";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
