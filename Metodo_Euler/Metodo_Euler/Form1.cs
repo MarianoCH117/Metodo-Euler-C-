@@ -53,7 +53,15 @@ namespace Metodo_Euler
             c5.Width = 80;
             c5.ReadOnly = true;
 
+            DataGridViewTextBoxColumn c6 = new DataGridViewTextBoxColumn();
+            c6.HeaderText = "YEulerMejorado";
+            c6.Width = 80;
+            c6.ReadOnly = true;
 
+            DataGridViewTextBoxColumn c7 = new DataGridViewTextBoxColumn();
+            c7.HeaderText = "PorcentajeMejorado";
+            c7.Width = 80;
+            c7.ReadOnly = true;
 
 
             dgvEuler.Columns.Add(c1);
@@ -61,6 +69,8 @@ namespace Metodo_Euler
             dgvEuler.Columns.Add(c3);
             dgvEuler.Columns.Add(c4);
             dgvEuler.Columns.Add(c5);
+            dgvEuler.Columns.Add(c6);
+            dgvEuler.Columns.Add(c7);
 
         }
 
@@ -82,7 +92,6 @@ namespace Metodo_Euler
         private void btnCalcularEuler_Click(object sender, EventArgs e)
         {
             calcularEuler();
-            calcularEulerMejorado();
         }
 
         private void txtMaxX_KeyPress(object sender, KeyPressEventArgs e)
@@ -113,7 +122,6 @@ namespace Metodo_Euler
             if (e.KeyChar == (char)Keys.Enter)
             {
                 calcularEuler();
-                calcularEulerMejorado();
                 e.Handled = true;
             }
         }
@@ -140,6 +148,15 @@ namespace Metodo_Euler
             }
             else
             {
+                double x0m = 0;
+                double y0m = 0;
+                double hm = 0;
+                double topem = 0f;
+                double ym = 0;
+                double ynm = 0;
+                double xnm = 0;
+                double ecuam;
+                double ecuaumm;
                 double xn = 0, yn = 4, h = 0, y = 0, tope = 2;
                 int contador = 0;
                 try
@@ -149,6 +166,12 @@ namespace Metodo_Euler
                     h = 0;
                     y = 0;
                     tope = double.Parse(txtMaxX.Text);
+
+                    x0m = double.Parse(txtXo.Text);
+                    y0m = double.Parse(txtYo.Text);
+                    hm = 0;
+                    ym = 0;
+                    topem = double.Parse(txtMaxX.Text);
 
                     while (xn < tope)
                     {
@@ -161,12 +184,34 @@ namespace Metodo_Euler
                         yn = y;
                         double ecuacion = Math.Pow((Math.Log((2 * xn) + 1) / 4) + 2, 2);
                         porcentajes = Math.Abs(((ecuacion - y) / ecuacion) * 100);
+
+
+                        double porcentajesm;
+                        double raizm = (double)Math.Sqrt(y0m);
+                        double denominadorm = (2 * x0m) + 1;
+                        ecuam = raizm / denominadorm;
+                        ynm = (y0m + (hm * ecuam));
+                        xnm = x0m + hm;
+                        double raizaum = (double)Math.Sqrt(ynm);
+                        double denominadoraum = (2 * xnm) + 1;
+                        ecuaumm = raizaum / denominadoraum;
+                        ym = y0m + (hm / 2) * (ecuam + ecuaumm);
+                        double yrealm = (double)Math.Pow((Math.Log((2 * xnm) + 1) / 4) + 2, 2);
+                        hm = double.Parse(txtH.Text, CultureInfo.InvariantCulture);
+                        porcentajesm = Math.Abs(((yrealm - ym) / yrealm) * 100);
+                        x0m = xnm;
+                        y0m = ym;
+
+
                         dgvEuler.Rows.Add(
                             Convert.ToString(contador),
                             Convert.ToString(Math.Round(xn, 6, MidpointRounding.AwayFromZero)),
                             Convert.ToString(Math.Round(ecuacion, 6, MidpointRounding.AwayFromZero)),
                             Convert.ToString(Math.Round(y, 6, MidpointRounding.AwayFromZero)),
-                            Convert.ToString(Math.Round(porcentajes, 6, MidpointRounding.AwayFromZero)) + "%");
+                            Convert.ToString(Math.Round(porcentajes, 6, MidpointRounding.AwayFromZero)) + "%",
+                            Convert.ToString(Math.Round(ym, 6, MidpointRounding.AwayFromZero)),
+                            Convert.ToString(Math.Round(porcentajesm, 6, MidpointRounding.AwayFromZero)) + "%"
+                            );
                         contador++;
                     }
                 }
@@ -179,19 +224,7 @@ namespace Metodo_Euler
 
         private void calcularEulerMejorado()
         {
-            DataGridViewTextBoxColumn c6 = new DataGridViewTextBoxColumn();
-            c6.HeaderText = "YEulerMejorado";
-            c6.Width = 80;
-            c6.ReadOnly = true;
-
-            DataGridViewTextBoxColumn c7 = new DataGridViewTextBoxColumn();
-            c7.HeaderText = "PorcentajeMejorado";
-            c7.Width = 80;
-            c7.ReadOnly = true;
-
-            dgvEuler.Columns.Add(c6);
-            dgvEuler.Columns.Add(c7);
-
+           
             if (txtH.Text == "" || txtMaxX.Text == "" || txtXo.Text == "" || txtYo.Text == "")
             {
                 DialogResult error = MessageBox.Show("Por favor, revise que no haya ninguna caja de texto en blanco.", "Error de datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
