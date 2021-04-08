@@ -254,7 +254,7 @@ namespace Metodo_Euler
                         x0rk = xnRK;
                         y0rk = yrk;
                         double yrkreal = (double)Math.Pow((Math.Log((2 * xnRK) + 1) / 4) + 2, 2);                        
-                        porcentajesRK = Math.Abs(((yrkreal - yrk) / yrkreal) * 100);
+                        porcentajesRK = Math.Abs(((Math.Round(yrkreal, 6, MidpointRounding.AwayFromZero) - (Math.Round(yrk, 6, MidpointRounding.AwayFromZero))) / (Math.Round(yrkreal, 6, MidpointRounding.AwayFromZero))) * 100);
                         
                        
 
