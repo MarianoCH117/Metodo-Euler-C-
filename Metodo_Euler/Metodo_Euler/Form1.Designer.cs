@@ -84,7 +84,7 @@ namespace Metodo_Euler
             // lblDatos
             // 
             this.lblDatos.AutoSize = true;
-            this.lblDatos.Location = new System.Drawing.Point(6, 178);
+            this.lblDatos.Location = new System.Drawing.Point(6, 218);
             this.lblDatos.Name = "lblDatos";
             this.lblDatos.Size = new System.Drawing.Size(207, 315);
             this.lblDatos.TabIndex = 18;
