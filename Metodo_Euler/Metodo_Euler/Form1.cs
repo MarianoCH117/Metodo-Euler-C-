@@ -63,6 +63,16 @@ namespace Metodo_Euler
             c7.Width = 80;
             c7.ReadOnly = true;
 
+            DataGridViewTextBoxColumn c8 = new DataGridViewTextBoxColumn();
+            c8.HeaderText = "PorcentajeMejorado";
+            c8.Width = 80;
+            c8.ReadOnly = true;
+
+            DataGridViewTextBoxColumn c9 = new DataGridViewTextBoxColumn();
+            c9.HeaderText = "PorcentajeMejorado";
+            c9.Width = 80;
+            c9.ReadOnly = true;
+
 
             dgvEuler.Columns.Add(c1);
             dgvEuler.Columns.Add(c2);
@@ -71,6 +81,8 @@ namespace Metodo_Euler
             dgvEuler.Columns.Add(c5);
             dgvEuler.Columns.Add(c6);
             dgvEuler.Columns.Add(c7);
+            dgvEuler.Columns.Add(c8);
+            dgvEuler.Columns.Add(c9);
 
         }
 
@@ -157,7 +169,20 @@ namespace Metodo_Euler
                 double xnm = 0;
                 double ecuam;
                 double ecuaumm;
+                double k1 = 0;
+                double k2 = 0;
+                double k3 = 0;
+                double k4 = 0;
+                double ecuacionRK;                
+                double porcentajesRK;
+                double xnRK;
+                double x0rk;
+                double y0rk;
+                double hrk;
+                double yrk;
+
                 double xn = 0, yn = 4, h = 0, y = 0, tope = 2;
+
                 int contador = 0;
                 try
                 {
@@ -172,6 +197,13 @@ namespace Metodo_Euler
                     hm = 0;
                     ym = 0;
                     topem = double.Parse(txtMaxX.Text);
+
+                    x0rk = double.Parse(txtXo.Text);
+                    y0rk = double.Parse(txtYo.Text);
+                    hrk = 0;
+                    yrk = 0;
+                    topem = double.Parse(txtMaxX.Text);
+
 
                     while (xn < tope)
                     {
@@ -203,6 +235,29 @@ namespace Metodo_Euler
                         y0m = ym;
 
 
+                        xnRK = x0rk + hrk;              
+                        double raizRK = (double)Math.Sqrt(y0rk);
+                        double denominadorRK = (2 * x0rk) + 1;
+                        ecuacionRK = (raizRK / denominadorRK);
+                        k1 = ecuacionRK; 
+                        raizRK = (double)Math.Sqrt(((k1 * hrk) / 2) + y0rk);
+                        denominadorRK = (2 * (x0rk + (hrk / 2))) + 1;
+                        k2 = raizRK / denominadorRK;                       
+                        raizRK = (double)Math.Sqrt(((k2 * hrk) / 2) + y0rk);
+                        denominadorRK = (2 * (x0rk + (hrk / 2))) + 1;
+                        k3 = raizRK / denominadorRK;                       
+                        raizRK = (double)Math.Sqrt(((k3 * hrk)) + y0rk);
+                        denominadorRK = (2 * (x0rk + hrk)) + 1;
+                        k4 = raizRK / denominadorRK;                      
+                        yrk = y0rk + ((((k1 + (2 * k2) + (2 * k3) + k4)) * hrk) / 6);                      
+                        hrk = 0.25f;
+                        x0rk = xnRK;
+                        y0rk = yrk;
+                        double yrkreal = (double)Math.Pow((Math.Log((2 * xnRK) + 1) / 4) + 2, 2);                        
+                        porcentajesRK = Math.Abs(((yrkreal - yrk) / yrkreal) * 100);
+                        
+                       
+
                         dgvEuler.Rows.Add(
                             Convert.ToString(contador),
                             Convert.ToString(Math.Round(xn, 6, MidpointRounding.AwayFromZero)),
@@ -210,7 +265,9 @@ namespace Metodo_Euler
                             Convert.ToString(Math.Round(y, 6, MidpointRounding.AwayFromZero)),
                             Convert.ToString(Math.Round(porcentajes, 6, MidpointRounding.AwayFromZero)) + "%",
                             Convert.ToString(Math.Round(ym, 6, MidpointRounding.AwayFromZero)),
-                            Convert.ToString(Math.Round(porcentajesm, 6, MidpointRounding.AwayFromZero)) + "%"
+                            Convert.ToString(Math.Round(porcentajesm, 6, MidpointRounding.AwayFromZero)) + "%",
+                            Convert.ToString(Math.Round(yrk, 6, MidpointRounding.AwayFromZero)),
+                            Convert.ToString(Math.Round(porcentajesRK, 6)) + "%"
                             );
                         contador++;
                     }
