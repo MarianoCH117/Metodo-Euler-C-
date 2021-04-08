@@ -91,7 +91,7 @@ namespace Metodo_Euler
 
         private void btnCalcularEuler_Click(object sender, EventArgs e)
         {
-            calcularEuler();
+            calcularEulerMejorado();
         }
 
         private void txtMaxX_KeyPress(object sender, KeyPressEventArgs e)
@@ -121,7 +121,7 @@ namespace Metodo_Euler
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                calcularEuler();
+                calcularEulerMejorado();
                 e.Handled = true;
             }
         }
@@ -139,7 +139,7 @@ namespace Metodo_Euler
             }
         }
 
-        private void calcularEuler()
+        private void calcularEulerMejorado()
         {
             this.dgvEuler.Rows.Clear();
             if (txtH.Text == "" || txtMaxX.Text == "" || txtXo.Text == "" || txtYo.Text == "")
@@ -220,69 +220,6 @@ namespace Metodo_Euler
                     DialogResult error = MessageBox.Show("Error en el formato de los datos introducidos. Por favor, introduzca sólo números.", "Error de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
-
-        private void calcularEulerMejorado()
-        {
-           
-            if (txtH.Text == "" || txtMaxX.Text == "" || txtXo.Text == "" || txtYo.Text == "")
-            {
-                DialogResult error = MessageBox.Show("Por favor, revise que no haya ninguna caja de texto en blanco.", "Error de datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                double x0 = 0;
-                double y0 = 0;
-                double h = 0;
-                double tope = 0f;
-                double y = 0;
-                double yn = 0;
-                double xn = 0;
-                double ecua;
-                double ecuaum;
-                try
-                {
-                    x0 = double.Parse(txtXo.Text);
-                    y0 = double.Parse(txtYo.Text);
-                    h = 0;
-                    y = 0;
-                    tope = double.Parse(txtMaxX.Text);
-
-                    while (xn < tope)
-                    {
-                        double porcentajes;
-                        double raiz = (double)Math.Sqrt(y0);
-                        double denominador = (2 * x0) + 1;
-                        ecua = raiz / denominador;
-                        yn = (y0 + (h * ecua));
-                        xn = x0 + h;
-                        double raizaum = (double)Math.Sqrt(yn);
-                        double denominadoraum = (2 * xn) + 1;
-                        ecuaum = raizaum / denominadoraum;
-                        y = y0 + (h / 2) * (ecua + ecuaum);
-                        double yreal = (double)Math.Pow((Math.Log((2 * xn) + 1) / 4) + 2, 2);
-                        h = double.Parse(txtH.Text, CultureInfo.InvariantCulture);
-                        porcentajes = Math.Abs(((yreal - y) / yreal) * 100);
-                        x0 = xn;
-                        y0 = y;
-
-                        dgvEuler.Rows.Add(
-                            Convert.ToString(Math.Round(y, 6, MidpointRounding.AwayFromZero)),
-                            Convert.ToString(Math.Round(porcentajes, 6, MidpointRounding.AwayFromZero)) + "%");
-                    }
-
-                }
-                catch (FormatException)
-                {
-                    DialogResult error = MessageBox.Show("Error en el formato de los datos introducidos. Por favor, introduzca sólo números.", "Error de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-
-        private void llenado(double n, double xn, double yreal, double Ere, double ynem, double erem)
-        {
-
-
         }
 
 
