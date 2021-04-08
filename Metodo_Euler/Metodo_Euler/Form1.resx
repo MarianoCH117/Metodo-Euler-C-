@@ -1359,8 +1359,7 @@ Fecha de entrega:
 </value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>En matemática y computación, el método de Euler, llamado así en honor de Leonhard Euler, es un procedimiento de integración numérica para resolver ecuaciones diferenciales ordinarias a partir de un valor inicial dado. 
-El método de Euler es un método de primer orden, lo que significa que el error local es proporcional al cuadrado del tamaño del paso, y el error global es proporcionar al tamaño del paso.</value>
+    <value>Uno de los métodos más utilizados para resolver numéricamente problemas de ecuaciones diferenciales ordinarias con condiciones iniciales es el método de Runge-Kutta de cuarto orden, el cual proporciona un pequeño margen de error con respecto a la solución real del problema y es fácilmente programable en un software para realizar las iteraciones necesarias.</value>
   </data>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2122,7 +2121,7 @@ El método de Euler es un método de primer orden, lo que significa que el error
   <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABBQAAADMCAYAAADDPfDNAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAKDVJREFUeF7t3YtvFNf1wPEKgvgBNZhnTAyERxCkRXXqSEYEl0csGlU8QiHEErVI
+        vAAADrwBlbxySQAAKDVJREFUeF7t3YtvFNf1wPEKgvgBNZhnTAyERxCkRXXqSEYEl0csGlU8QiHEErVI
         AghRaCRCiZTIiqACKQpBWBUVqUBQi0cbI2ShwP83vz3jO8PduTu7szOzM/fOfD/S0SzGXq93zt2ZOXMf
         vwIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -2300,7 +2299,7 @@ El método de Euler es un método de primer orden, lo que significa que el error
   <data name="pictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAq4AAACoCAYAAAAhOWwyAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAIlpJREFUeF7t3f2PFdUZwHHTrTFCrFaEiq4tsiWuSiKRBkJAXtKgMcXGSCip2bCW
+        vAAADrwBlbxySQAAIlpJREFUeF7t3f2PFdUZwHHTrTFCrFaEiq4tsiWuSiKRBkJAXtKgMcXGSCip2bCW
         VkJ9iQ2BtJasbLP+0JCG/iAhDaZIcW2ySIkR/r/b+1yfWefOnDNz5v3Mme8neTJXF3b3LnfPfeac5zzn
         AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADou7W1tdGrr746
         0v8EgGDdvn17dOjQIcY7AOijy5cvjx566KHRvn37GMgBBE8S1/FlND8/z5gHAH2ysrIympmZmQziBw4c
@@ -2453,7 +2452,7 @@ El método de Euler es un método de primer orden, lo que significa que el error
   <data name="pictureBox6.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABAwAAAECCAYAAAB60UWhAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAALktJREFUeF7t3f2vHNV5AOAIN3JjK4kNGEHiuv4IwmmQcECqhYzAKKVpBIYUmlpB
+        vAAADrwBlbxySQAALktJREFUeF7t3f2vHNV5AOAIN3JjK4kNGEHiuv4IwmmQcECqhYzAKKVpBIYUmlpB
         Dq4guAnhB2SBqpS4ODVKVJqPH4xo5CgItdDUqYWQ8F/Qf2x7z/rMZnb27Mx+zM7XPo/0apZ7zfX1vbPv
         vHPmnPd8BgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -2657,7 +2656,7 @@ El método de Euler es un método de primer orden, lo que significa que el error
   <data name="pictureBox7.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABAwAAAECCAYAAAB60UWhAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAL45JREFUeF7t3e2vXMV5APAKN3JjlGDzJkhc1y9BmIKEAakWMgWjlFAKhhSaWokc
+        vAAADrwBlbxySQAAL45JREFUeF7t3e2vXMV5APAKN3JjlGDzJkhc1y9BmIKEAakWMgWjlFAKhhSaWokc
         XEGgKeEDQvAhJS5ujRqFkuSDEY2MYqEGkpJYCAn/Bf3Htnc2s+uzZ2fP2Zfzvr+f9Oisfa/Xe++efc7M
         nJln/gQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIC0
@@ -2866,7 +2865,7 @@ El método de Euler es un método de primer orden, lo que significa que el error
   <data name="pictureBox8.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA+MAAACwCAYAAABkdr8UAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAK6NJREFUeF7t3f3PFNUVwHHTp40RYlFBBKoEUAIttSg2ECKhjyHEaEEopBINlUrQ
+        vAAADrwBlbxySQAAK6NJREFUeF7t3f3PFNUVwHHTp40RYlFBBKoEUAIttSg2ECKhjyHEaEEopBINlUrQ
         tpKmLYYm2jyFKj80xMIPNWCoGkKwKZQYUvtD/7vtnuXMMi93Zu7Ozst9+X6Sk10Bn9fdM/fcuffcBwAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
