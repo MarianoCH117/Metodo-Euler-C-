@@ -1368,7 +1368,7 @@ Tal vez, de las fórmulas para localizar raíces, la fórmula de Newton-Raphson 
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAYAAAAAwCAYAAAAYeq1+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAABK1JREFUeF7t1eGKpCkMheG+/5uexR8uIsacaNQq6n1Advoz5kRn2P4DAAAAAAAA
+        wAAADsABataJCQAABK1JREFUeF7t1eGKpCkMheG+/5uexR8uIsacaNQq6n1Advoz5kRn2P4DAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPzvX7MAAD+i/58+vwQA4EfxCwAAftTX/AIog9Y1snORr3mEC7x3
         Lk6/1yf+fSjvYvnm9zo9+0vfejdr7vI9eqdZr4/RDjMaLGPY2xcuee36BO0c1ky3Zv2UNymsdyl/9ua8
         dY8TObdmf+n1HUt+v2Z291uZvY65OeStC5ecNqv/+QUl//aMr9+kmM1Q9rz9mzLzbs/+0ou7lkwrN/q9
@@ -1394,7 +1394,7 @@ Tal vez, de las fórmulas para localizar raíces, la fórmula de Newton-Raphson 
   <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQ8AAAAkCAYAAACXM79/AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAA5FJREFUeF7tkQuuHTkIRN/+N50RUpAQAfMxdHcydSTruk1BlX1/AAAAAAAAAAAA
+        wAAADsABataJCQAAA5FJREFUeF7tkQuuHTkIRN/+N50RUpAQAfMxdHcydSTruk1BlX1/AAAAAAAAAAAA
         AAAAAAAAAAAAAAAAEPz6/Vuh0/MUlI3Xiek7fPVNsu9hsXGnzXfanP00n7/LTcAvXk5mOuXbyv61N7He
         g34zOTfvsjF7M+9bfPZOE8G+dDnKwnnkXrOdeXt+FvkG3t4jqk8w6fFE3rf43N3+tT+OMmRyPJX17Tc5
         vcepRjyZfcLrybxv8Zk7UpDJMNPzOmQyPJmz4zWZ7eTfrW1w6/d03rdYvycbREaZENaM25kbcE65PE41
@@ -1415,7 +1415,7 @@ Tal vez, de las fórmulas para localizar raíces, la fórmula de Newton-Raphson 
   <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAJoAAABGCAYAAAA0A41DAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAAoZJREFUeF7t0uGO3CAMRtF5/5duyw9LrAsYsGGc7D0SaieA483nDwAAAAAAAAAA
+        wAAADsABataJCQAAAoZJREFUeF7t0uGO3CAMRtF5/5duyw9LrAsYsGGc7D0SaieA483nDwAAAAAAAAAA
         ABL4U62e0Z7HqbpIpg66F/rpYWDYXm4m4FtDwLC91OyQ3Rw0hu2FGDQcI2HWa2R1f6bmiOcuEpoJ1Boa
         2a+XV1QdJDET5mzokcMRWQsJRA5Q5GDMvhMPMBvkSuhRw7HyTiS3MjwzZ61zsh9RCw8yG+RM6LLfO6ef
         z9SzzuABVkNsnZdneq/8bj2r6d+atY+HWA2ynG8NS6vOzLPWGdGriwdaDdIbvr47quV9F5LYDdEzAPre
@@ -1432,7 +1432,7 @@ Tal vez, de las fórmulas para localizar raíces, la fórmula de Newton-Raphson 
   <data name="pictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAKYAAABECAYAAAALBE7+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAAqZJREFUeF7t0gtuxCAMRdHZ/6ZbpRKSSyG2sUOA3iOhdhI+Jn4fAAAAAAAAAAAA
+        wAAADsABataJCQAAAqZJREFUeF7t0gtuxCAMRdHZ/6ZbpRKSSyG2sUOA3iOhdhI+Jn4fAAAAAAAAAAAA
         AAv6EqOl9zzDk3tjYzIYrZDMCA7hxC9aIGYGhnDihyWUs4NJOEEwsY7SfDl67t4V9RxtT01kLQ6gBcAS
         sDJHjqisfbAprfmegGSGKXMvbEhrvicgmUHynIvDWBrvDUhWmLzn4iCWxnsCkhmmzL2wGUvjrQEpc7LC
         ZD0Xh/E0vTe3PK/fX789+7dE12NTnsb3gnb3XJLzemskyxwcytP4jKDIPbS9Ms7DhkaaHg2LXKvtEzkH
