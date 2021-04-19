@@ -33,24 +33,25 @@ namespace Metodo_Euler
             c1.ReadOnly = true;
 
             DataGridViewTextBoxColumn c2 = new DataGridViewTextBoxColumn();
-            c2.HeaderText = "Xn";
+            c2.HeaderText = "Xi";
             c2.Width = 80;
             c2.ReadOnly = true;
 
             DataGridViewTextBoxColumn c3 = new DataGridViewTextBoxColumn();
-            c3.HeaderText = "Yreal";
+            c3.HeaderText = "f(xi)";
             c3.Width = 80;
             c3.ReadOnly = true;
 
             DataGridViewTextBoxColumn c4 = new DataGridViewTextBoxColumn();
-            c4.HeaderText = "Yeuler";
+            c4.HeaderText = "f'(x)";
             c4.Width = 80;
             c4.ReadOnly = true;
 
             DataGridViewTextBoxColumn c5 = new DataGridViewTextBoxColumn();
-            c5.HeaderText = "Ere";
-            c5.Width = 80;
+            c5.HeaderText = "|xi-xi-1|";
+            c5.Width = 150;
             c5.ReadOnly = true;
+
 
             dgvEuler.Columns.Add(c1);
             dgvEuler.Columns.Add(c2);
@@ -131,8 +132,8 @@ namespace Metodo_Euler
                 DialogResult error = MessageBox.Show("Por favor, revise que no haya ninguna caja de texto en blanco.", "Error de datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
-            {
-                double x = Double.Parse(txtXi.Text);
+            {                
+                double x = double.Parse(txtXi.Text, CultureInfo.InvariantCulture);
                 int n = 0;
                 double xi;
                 double errorabs = 9999999;
@@ -141,16 +142,17 @@ namespace Metodo_Euler
                     while (errorabs != 0)
                     {
                         if (errorabs == 9999999)
-                        {
-                            Console.WriteLine("Numero de Iteraciones: " + n);
-                            Console.WriteLine("Valor Xi: " + x);
-                            double ecuacion = Math.Round((Math.Round(Math.Pow(x, 3), 6, MidpointRounding.AwayFromZero) + Math.Round((4 * Math.Pow(x, 2)), 6, MidpointRounding.AwayFromZero) - 10), 6, MidpointRounding.AwayFromZero);
-                            Console.WriteLine("F(X): " + ecuacion);
-                            double ecuacionDerivada = (3 * (Math.Round(Math.Pow(x, 2), 6, MidpointRounding.AwayFromZero)) + (8 * x));
-                            Console.WriteLine("F'(X):  " + ecuacionDerivada);
-                            xi = Math.Round((x - (ecuacion / ecuacionDerivada)), 6, MidpointRounding.AwayFromZero);
-                            Console.WriteLine("Error absoluto:  INEXISTENTE");
-                            Console.WriteLine("");
+                        {               
+                            
+                            double ecuacion = Math.Round((Math.Round(Math.Pow(x, 3), 6, MidpointRounding.AwayFromZero) + Math.Round((4 * Math.Pow(x, 2)), 6, MidpointRounding.AwayFromZero) - 10), 6, MidpointRounding.AwayFromZero);           
+                            double ecuacionDerivada = (3 * (Math.Round(Math.Pow(x, 2), 6, MidpointRounding.AwayFromZero)) + (8 * x));               
+                            xi = Math.Round((x - (ecuacion / ecuacionDerivada)), 6, MidpointRounding.AwayFromZero);                                                   
+                            dgvEuler.Rows.Add(
+                            Convert.ToString(n),
+                            Convert.ToString(x),
+                            Convert.ToString(Math.Round(ecuacion, 6, MidpointRounding.AwayFromZero)),
+                            Convert.ToString(Math.Round(ecuacionDerivada, 6, MidpointRounding.AwayFromZero)),
+                            Convert.ToString("No existe"));
                             errorabs = xi - x;
                             x = xi;
                             n++;
@@ -158,30 +160,31 @@ namespace Metodo_Euler
                         }
                         else
                         {
-                            Console.WriteLine("Numero de Iteraciones: " + n);
-                            Console.WriteLine("Valor Xi: " + x);
-                            double ecuacion = Math.Round((Math.Round(Math.Pow(x, 3), 6, MidpointRounding.AwayFromZero) + Math.Round((4 * Math.Pow(x, 2)), 6, MidpointRounding.AwayFromZero) - 10), 6, MidpointRounding.AwayFromZero);
-                            Console.WriteLine("F(X): " + ecuacion);
-                            double ecuacionDerivada = (3 * (Math.Round(Math.Pow(x, 2), 6, MidpointRounding.AwayFromZero)) + (8 * x));
-                            Console.WriteLine("F'(X):  " + ecuacionDerivada);
+                            double ecuacion = Math.Round((Math.Round(Math.Pow(x, 3), 6, MidpointRounding.AwayFromZero) + Math.Round((4 * Math.Pow(x, 2)), 6, MidpointRounding.AwayFromZero) - 10), 6, MidpointRounding.AwayFromZero);                            
+                            double ecuacionDerivada = (3 * (Math.Round(Math.Pow(x, 2), 6, MidpointRounding.AwayFromZero)) + (8 * x));                            
                             xi = Math.Round((x - (ecuacion / ecuacionDerivada)), 6, MidpointRounding.AwayFromZero);
-                            Console.WriteLine("Error absoluto:  " + Math.Abs(Math.Round(errorabs, 6, MidpointRounding.AwayFromZero)));
-                            Console.WriteLine("");
+                            dgvEuler.Rows.Add(
+                            Convert.ToString(n),
+                            Convert.ToString(Math.Round(x, 6, MidpointRounding.AwayFromZero)),
+                            Convert.ToString(Math.Round(ecuacion, 6, MidpointRounding.AwayFromZero)),
+                            Convert.ToString(Math.Round(ecuacionDerivada, 6, MidpointRounding.AwayFromZero)),
+                            Convert.ToString(Math.Abs(Math.Round(errorabs, 6, MidpointRounding.AwayFromZero))) + "%");
                             errorabs = xi - x;
                             x = xi;
                             n++;
 
                             if (errorabs == 0)
                             {
-                                Console.WriteLine("Numero de Iteraciones: " + n);
-                                Console.WriteLine("Valor Xi: " + x);
-                                ecuacion = Math.Round((Math.Round(Math.Pow(x, 3), 6, MidpointRounding.AwayFromZero) + Math.Round((4 * Math.Pow(x, 2)), 6, MidpointRounding.AwayFromZero) - 10), 6, MidpointRounding.AwayFromZero);
-                                Console.WriteLine("F(X): " + ecuacion);
+                                ecuacion = Math.Round((Math.Round(Math.Pow(x, 3), 6, MidpointRounding.AwayFromZero) + Math.Round((4 * Math.Pow(x, 2)), 6, MidpointRounding.AwayFromZero) - 10), 6, MidpointRounding.AwayFromZero);   
                                 ecuacionDerivada = (3 * (Math.Round(Math.Pow(x, 2), 6, MidpointRounding.AwayFromZero)) + (8 * x));
                                 Console.WriteLine("F'(X):  " + ecuacionDerivada);
-                                xi = Math.Round((x - (ecuacion / ecuacionDerivada)), 6, MidpointRounding.AwayFromZero);
-                                Console.WriteLine("Error absoluto:  " + Math.Abs(Math.Round(errorabs, 6, MidpointRounding.AwayFromZero)));
-                                Console.WriteLine("");
+                                xi = Math.Round((x - (ecuacion / ecuacionDerivada)), 6, MidpointRounding.AwayFromZero);                     
+                                dgvEuler.Rows.Add(
+                                Convert.ToString(n),
+                                Convert.ToString(Math.Round(x, 6, MidpointRounding.AwayFromZero)),
+                                Convert.ToString(Math.Round(ecuacion, 6, MidpointRounding.AwayFromZero)),
+                                Convert.ToString(Math.Round(ecuacionDerivada, 6, MidpointRounding.AwayFromZero)),
+                                Convert.ToString(Math.Abs(Math.Round(errorabs, 6, MidpointRounding.AwayFromZero))) + "%");
                                 errorabs = xi - x;
                             }
                         }
