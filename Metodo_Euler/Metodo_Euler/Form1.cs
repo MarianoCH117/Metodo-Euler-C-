@@ -133,12 +133,12 @@ namespace Metodo_Euler
             }
             else
             {                
-                double x = double.Parse(txtXi.Text, CultureInfo.InvariantCulture);
-                int n = 0;
-                double xi;
-                double errorabs = 9999999;
                 try
                 {
+                    double x = double.Parse(txtXi.Text, CultureInfo.InvariantCulture);
+                    int n = 0;
+                    double xi;
+                    double errorabs = 9999999;
                     while (errorabs != 0)
                     {
                         if (errorabs == 9999999)
