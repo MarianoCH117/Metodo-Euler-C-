@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
-    <ApplicationIcon>tuliosad280_zkx_icon.ico</ApplicationIcon>
+    <ApplicationIcon>18f021894daf1cb6c34a1e9a330f988da6ed8fa4_full_iCx_icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
