@@ -39,7 +39,13 @@ namespace Metodo_Euler
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtXo = new System.Windows.Forms.TextBox();
+            this.txtYo = new System.Windows.Forms.TextBox();
+            this.txtMaxX = new System.Windows.Forms.TextBox();
             this.txtXi = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -135,20 +141,78 @@ namespace Metodo_Euler
             this.label3.Text = resources.GetString("label3.Text");
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(232, 306);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 19);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Valor Xo: ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(232, 347);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 19);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Valor Yo: ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(473, 306);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(108, 19);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Hasta que x sea:";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(244, 324);
+            this.label7.Location = new System.Drawing.Point(475, 350);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 19);
             this.label7.TabIndex = 7;
             this.label7.Text = "Valor de h: ";
             // 
+            // txtXo
+            // 
+            this.txtXo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtXo.Location = new System.Drawing.Point(305, 303);
+            this.txtXo.Name = "txtXo";
+            this.txtXo.Size = new System.Drawing.Size(100, 25);
+            this.txtXo.TabIndex = 8;
+            this.txtXo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtXo_KeyPress);
+            // 
+            // txtYo
+            // 
+            this.txtYo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtYo.Location = new System.Drawing.Point(304, 344);
+            this.txtYo.Name = "txtYo";
+            this.txtYo.Size = new System.Drawing.Size(100, 25);
+            this.txtYo.TabIndex = 9;
+            this.txtYo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYo_KeyPress);
+            // 
+            // txtMaxX
+            // 
+            this.txtMaxX.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtMaxX.Location = new System.Drawing.Point(585, 303);
+            this.txtMaxX.Name = "txtMaxX";
+            this.txtMaxX.Size = new System.Drawing.Size(100, 25);
+            this.txtMaxX.TabIndex = 10;
+            this.txtMaxX.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtMaxX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaxX_KeyPress);
+            // 
             // txtXi
             // 
             this.txtXi.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtXi.Location = new System.Drawing.Point(354, 321);
+            this.txtXi.Location = new System.Drawing.Point(585, 347);
             this.txtXi.Name = "txtXi";
             this.txtXi.Size = new System.Drawing.Size(100, 25);
             this.txtXi.TabIndex = 11;
@@ -201,7 +265,7 @@ namespace Metodo_Euler
             this.btnCalcularEuler.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(176)))), ((int)(((byte)(191)))));
             this.btnCalcularEuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalcularEuler.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCalcularEuler.Location = new System.Drawing.Point(354, 382);
+            this.btnCalcularEuler.Location = new System.Drawing.Point(585, 408);
             this.btnCalcularEuler.Name = "btnCalcularEuler";
             this.btnCalcularEuler.Size = new System.Drawing.Size(100, 34);
             this.btnCalcularEuler.TabIndex = 16;
@@ -227,7 +291,7 @@ namespace Metodo_Euler
             this.dgvEuler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEuler.EnableHeadersVisualStyles = false;
             this.dgvEuler.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(117)))), ((int)(((byte)(128)))));
-            this.dgvEuler.Location = new System.Drawing.Point(555, 294);
+            this.dgvEuler.Location = new System.Drawing.Point(752, 303);
             this.dgvEuler.Name = "dgvEuler";
             this.dgvEuler.RowHeadersVisible = false;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
@@ -249,7 +313,13 @@ namespace Metodo_Euler
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txtXi);
+            this.Controls.Add(this.txtMaxX);
+            this.Controls.Add(this.txtYo);
+            this.Controls.Add(this.txtXo);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
@@ -280,7 +350,13 @@ namespace Metodo_Euler
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtXo;
+        private System.Windows.Forms.TextBox txtYo;
+        private System.Windows.Forms.TextBox txtMaxX;
         private System.Windows.Forms.TextBox txtXi;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
