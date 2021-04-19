@@ -127,7 +127,7 @@ namespace Metodo_Euler
         private void calcularEuler()
         {
             this.dgvEuler.Rows.Clear();
-            if (txtXi.Text == "" || txtMaxX.Text == "" || txtXo.Text == "" || txtYo.Text == "")
+            if (txtXi.Text == "")
             {
                 DialogResult error = MessageBox.Show("Por favor, revise que no haya ninguna caja de texto en blanco.", "Error de datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
