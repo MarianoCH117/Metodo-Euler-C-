@@ -47,6 +47,8 @@ namespace Metodo_Euler
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnCalcularEuler = new System.Windows.Forms.Button();
             this.dgvEuler = new System.Windows.Forms.DataGridView();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -54,6 +56,8 @@ namespace Metodo_Euler
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEuler)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -126,11 +130,11 @@ namespace Metodo_Euler
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(217, 58);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(904, 104);
+            this.label3.Size = new System.Drawing.Size(904, 153);
             this.label3.TabIndex = 3;
             this.label3.Text = resources.GetString("label3.Text");
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -139,7 +143,7 @@ namespace Metodo_Euler
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(261, 322);
+            this.label7.Location = new System.Drawing.Point(265, 372);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 19);
             this.label7.TabIndex = 7;
@@ -148,7 +152,7 @@ namespace Metodo_Euler
             // txtXi
             // 
             this.txtXi.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtXi.Location = new System.Drawing.Point(371, 319);
+            this.txtXi.Location = new System.Drawing.Point(375, 369);
             this.txtXi.Name = "txtXi";
             this.txtXi.Size = new System.Drawing.Size(100, 25);
             this.txtXi.TabIndex = 11;
@@ -158,9 +162,9 @@ namespace Metodo_Euler
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(217, 179);
+            this.pictureBox2.Location = new System.Drawing.Point(214, 233);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(237, 34);
+            this.pictureBox2.Size = new System.Drawing.Size(311, 42);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
@@ -168,9 +172,9 @@ namespace Metodo_Euler
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(217, 223);
+            this.pictureBox3.Location = new System.Drawing.Point(214, 300);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(200, 34);
+            this.pictureBox3.Size = new System.Drawing.Size(299, 49);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 13;
             this.pictureBox3.TabStop = false;
@@ -178,9 +182,9 @@ namespace Metodo_Euler
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(615, 179);
+            this.pictureBox4.Location = new System.Drawing.Point(829, 233);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(200, 78);
+            this.pictureBox4.Size = new System.Drawing.Size(143, 64);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 14;
             this.pictureBox4.TabStop = false;
@@ -188,9 +192,9 @@ namespace Metodo_Euler
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(870, 179);
+            this.pictureBox5.Location = new System.Drawing.Point(997, 233);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(200, 78);
+            this.pictureBox5.Size = new System.Drawing.Size(157, 64);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 15;
             this.pictureBox5.TabStop = false;
@@ -201,7 +205,7 @@ namespace Metodo_Euler
             this.btnCalcularEuler.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(176)))), ((int)(((byte)(191)))));
             this.btnCalcularEuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalcularEuler.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCalcularEuler.Location = new System.Drawing.Point(371, 380);
+            this.btnCalcularEuler.Location = new System.Drawing.Point(375, 430);
             this.btnCalcularEuler.Name = "btnCalcularEuler";
             this.btnCalcularEuler.Size = new System.Drawing.Size(100, 34);
             this.btnCalcularEuler.TabIndex = 16;
@@ -227,21 +231,43 @@ namespace Metodo_Euler
             this.dgvEuler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEuler.EnableHeadersVisualStyles = false;
             this.dgvEuler.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(117)))), ((int)(((byte)(128)))));
-            this.dgvEuler.Location = new System.Drawing.Point(549, 295);
+            this.dgvEuler.Location = new System.Drawing.Point(531, 314);
             this.dgvEuler.Name = "dgvEuler";
             this.dgvEuler.RowHeadersVisible = false;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
             this.dgvEuler.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEuler.RowTemplate.Height = 25;
-            this.dgvEuler.Size = new System.Drawing.Size(391, 174);
+            this.dgvEuler.Size = new System.Drawing.Size(499, 166);
             this.dgvEuler.TabIndex = 17;
             this.dgvEuler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEuler_CellContentClick);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(680, 233);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(143, 42);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 18;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(531, 233);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(143, 42);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 19;
+            this.pictureBox7.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1166, 503);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.dgvEuler);
             this.Controls.Add(this.btnCalcularEuler);
             this.Controls.Add(this.pictureBox5);
@@ -267,6 +293,8 @@ namespace Metodo_Euler
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEuler)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,6 +317,8 @@ namespace Metodo_Euler
         private System.Windows.Forms.Button btnCalcularEuler;
         private System.Windows.Forms.DataGridView dgvEuler;
         private System.Windows.Forms.Label lblDatos;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }
 
