@@ -30,8 +30,8 @@ namespace Metodo_Euler
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblDatos = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,7 +46,7 @@ namespace Metodo_Euler
             this.txtXo = new System.Windows.Forms.TextBox();
             this.txtYo = new System.Windows.Forms.TextBox();
             this.txtMaxX = new System.Windows.Forms.TextBox();
-            this.txtH = new System.Windows.Forms.TextBox();
+            this.txtXi = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -208,14 +208,15 @@ namespace Metodo_Euler
             this.txtMaxX.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.txtMaxX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaxX_KeyPress);
             // 
-            // txtH
+            // txtXi
             // 
-            this.txtH.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtH.Location = new System.Drawing.Point(585, 347);
-            this.txtH.Name = "txtH";
-            this.txtH.Size = new System.Drawing.Size(100, 25);
-            this.txtH.TabIndex = 11;
-            this.txtH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtH_KeyPress);
+            this.txtXi.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtXi.Location = new System.Drawing.Point(585, 347);
+            this.txtXi.Name = "txtXi";
+            this.txtXi.Size = new System.Drawing.Size(100, 25);
+            this.txtXi.TabIndex = 11;
+            this.txtXi.TextChanged += new System.EventHandler(this.txtH_TextChanged);
+            this.txtXi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtH_KeyPress);
             // 
             // pictureBox2
             // 
@@ -278,22 +279,22 @@ namespace Metodo_Euler
             this.dgvEuler.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvEuler.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEuler.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(117)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEuler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(117)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEuler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvEuler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEuler.EnableHeadersVisualStyles = false;
             this.dgvEuler.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(117)))), ((int)(((byte)(128)))));
             this.dgvEuler.Location = new System.Drawing.Point(752, 303);
             this.dgvEuler.Name = "dgvEuler";
             this.dgvEuler.RowHeadersVisible = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.dgvEuler.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.dgvEuler.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvEuler.RowTemplate.Height = 25;
             this.dgvEuler.Size = new System.Drawing.Size(360, 174);
             this.dgvEuler.TabIndex = 17;
@@ -310,7 +311,7 @@ namespace Metodo_Euler
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.txtH);
+            this.Controls.Add(this.txtXi);
             this.Controls.Add(this.txtMaxX);
             this.Controls.Add(this.txtYo);
             this.Controls.Add(this.txtXo);
@@ -355,7 +356,7 @@ namespace Metodo_Euler
         private System.Windows.Forms.TextBox txtXo;
         private System.Windows.Forms.TextBox txtYo;
         private System.Windows.Forms.TextBox txtMaxX;
-        private System.Windows.Forms.TextBox txtH;
+        private System.Windows.Forms.TextBox txtXi;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;

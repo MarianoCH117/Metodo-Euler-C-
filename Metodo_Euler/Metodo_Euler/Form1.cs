@@ -126,40 +126,65 @@ namespace Metodo_Euler
         private void calcularEuler()
         {
             this.dgvEuler.Rows.Clear();
-            if (txtH.Text == "" || txtMaxX.Text == "" || txtXo.Text == "" || txtYo.Text == "")
+            if (txtXi.Text == "" || txtMaxX.Text == "" || txtXo.Text == "" || txtYo.Text == "")
             {
                 DialogResult error = MessageBox.Show("Por favor, revise que no haya ninguna caja de texto en blanco.", "Error de datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                double xn = 0, yn = 4, h = 0, y = 0, tope = 2;
-                int contador = 0;
+                double x = Double.Parse(txtXi.Text);
+                int n = 0;
+                double xi;
+                double errorabs = 9999999;
                 try
                 {
-                    xn = double.Parse(txtXo.Text);
-                    yn = double.Parse(txtYo.Text);
-                    h = 0;
-                    y = 0;
-                    tope = double.Parse(txtMaxX.Text);
-
-                    while (xn < tope)
+                    while (errorabs != 0)
                     {
-                        double raiz = Math.Sqrt(y);
-                        double denominador = (2 * xn) + 1;
-                        double porcentajes;
-                        y = yn + (h * (raiz / denominador));
-                        xn = xn + h;
-                        h = double.Parse(txtH.Text, CultureInfo.InvariantCulture);
-                        yn = y;
-                        double ecuacion = Math.Pow((Math.Log((2 * xn) + 1) / 4) + 2, 2);
-                        porcentajes = Math.Abs(((ecuacion - y) / ecuacion) * 100);
-                        dgvEuler.Rows.Add(
-                            Convert.ToString(contador),
-                            Convert.ToString(Math.Round(xn, 6, MidpointRounding.AwayFromZero)),
-                            Convert.ToString(Math.Round(ecuacion, 6, MidpointRounding.AwayFromZero)),
-                            Convert.ToString(Math.Round(y, 6, MidpointRounding.AwayFromZero)),
-                            Convert.ToString(Math.Round(porcentajes, 6, MidpointRounding.AwayFromZero)) + "%");
-                        contador++;
+                        if (errorabs == 9999999)
+                        {
+                            Console.WriteLine("Numero de Iteraciones: " + n);
+                            Console.WriteLine("Valor Xi: " + x);
+                            double ecuacion = Math.Round((Math.Round(Math.Pow(x, 3), 6, MidpointRounding.AwayFromZero) + Math.Round((4 * Math.Pow(x, 2)), 6, MidpointRounding.AwayFromZero) - 10), 6, MidpointRounding.AwayFromZero);
+                            Console.WriteLine("F(X): " + ecuacion);
+                            double ecuacionDerivada = (3 * (Math.Round(Math.Pow(x, 2), 6, MidpointRounding.AwayFromZero)) + (8 * x));
+                            Console.WriteLine("F'(X):  " + ecuacionDerivada);
+                            xi = Math.Round((x - (ecuacion / ecuacionDerivada)), 6, MidpointRounding.AwayFromZero);
+                            Console.WriteLine("Error absoluto:  INEXISTENTE");
+                            Console.WriteLine("");
+                            errorabs = xi - x;
+                            x = xi;
+                            n++;
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("Numero de Iteraciones: " + n);
+                            Console.WriteLine("Valor Xi: " + x);
+                            double ecuacion = Math.Round((Math.Round(Math.Pow(x, 3), 6, MidpointRounding.AwayFromZero) + Math.Round((4 * Math.Pow(x, 2)), 6, MidpointRounding.AwayFromZero) - 10), 6, MidpointRounding.AwayFromZero);
+                            Console.WriteLine("F(X): " + ecuacion);
+                            double ecuacionDerivada = (3 * (Math.Round(Math.Pow(x, 2), 6, MidpointRounding.AwayFromZero)) + (8 * x));
+                            Console.WriteLine("F'(X):  " + ecuacionDerivada);
+                            xi = Math.Round((x - (ecuacion / ecuacionDerivada)), 6, MidpointRounding.AwayFromZero);
+                            Console.WriteLine("Error absoluto:  " + Math.Abs(Math.Round(errorabs, 6, MidpointRounding.AwayFromZero)));
+                            Console.WriteLine("");
+                            errorabs = xi - x;
+                            x = xi;
+                            n++;
+
+                            if (errorabs == 0)
+                            {
+                                Console.WriteLine("Numero de Iteraciones: " + n);
+                                Console.WriteLine("Valor Xi: " + x);
+                                ecuacion = Math.Round((Math.Round(Math.Pow(x, 3), 6, MidpointRounding.AwayFromZero) + Math.Round((4 * Math.Pow(x, 2)), 6, MidpointRounding.AwayFromZero) - 10), 6, MidpointRounding.AwayFromZero);
+                                Console.WriteLine("F(X): " + ecuacion);
+                                ecuacionDerivada = (3 * (Math.Round(Math.Pow(x, 2), 6, MidpointRounding.AwayFromZero)) + (8 * x));
+                                Console.WriteLine("F'(X):  " + ecuacionDerivada);
+                                xi = Math.Round((x - (ecuacion / ecuacionDerivada)), 6, MidpointRounding.AwayFromZero);
+                                Console.WriteLine("Error absoluto:  " + Math.Abs(Math.Round(errorabs, 6, MidpointRounding.AwayFromZero)));
+                                Console.WriteLine("");
+                                errorabs = xi - x;
+                            }
+                        }
                     }
                 }
                 catch (FormatException)
@@ -167,6 +192,11 @@ namespace Metodo_Euler
                     DialogResult error = MessageBox.Show("Error en el formato de los datos introducidos. Por favor, introduzca sólo números.", "Error de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void txtH_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
