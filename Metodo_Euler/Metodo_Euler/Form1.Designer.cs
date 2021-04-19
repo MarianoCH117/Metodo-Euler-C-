@@ -100,12 +100,12 @@ namespace Metodo_Euler
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(176)))), ((int)(((byte)(191)))));
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(176)))), ((int)(((byte)(191)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(0, 127);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(212, 48);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Método de Euler";
+            this.button1.Text = "Método de Newton Raphson";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
@@ -124,18 +124,19 @@ namespace Metodo_Euler
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(217, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 37);
+            this.label1.Size = new System.Drawing.Size(360, 37);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Método de Euler";
+            this.label1.Text = "Método de Newton Raphson";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(217, 58);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(926, 104);
+            this.label3.Size = new System.Drawing.Size(904, 104);
             this.label3.TabIndex = 3;
             this.label3.Text = resources.GetString("label3.Text");
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -221,9 +222,9 @@ namespace Metodo_Euler
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(232, 179);
+            this.pictureBox2.Location = new System.Drawing.Point(217, 179);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(200, 78);
+            this.pictureBox2.Size = new System.Drawing.Size(237, 34);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
@@ -231,9 +232,9 @@ namespace Metodo_Euler
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(475, 179);
+            this.pictureBox3.Location = new System.Drawing.Point(217, 223);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(200, 78);
+            this.pictureBox3.Size = new System.Drawing.Size(200, 34);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 13;
             this.pictureBox3.TabStop = false;
@@ -241,7 +242,7 @@ namespace Metodo_Euler
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(716, 179);
+            this.pictureBox4.Location = new System.Drawing.Point(615, 179);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(200, 78);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -251,7 +252,7 @@ namespace Metodo_Euler
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(943, 179);
+            this.pictureBox5.Location = new System.Drawing.Point(870, 179);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(200, 78);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -326,7 +327,7 @@ namespace Metodo_Euler
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Método Numérico de Euler";
+            this.Text = "Método Numérico de Newton Raphson";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
