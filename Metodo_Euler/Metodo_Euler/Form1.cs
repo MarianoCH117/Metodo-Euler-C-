@@ -129,7 +129,7 @@ namespace Metodo_Euler
             this.dgvEuler.Rows.Clear();
             if (txtXi.Text == "")
             {
-                DialogResult error = MessageBox.Show("Por favor, revise que no haya ninguna caja de texto en blanco.", "Error de datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DialogResult error = MessageBox.Show("Por favor, revise que no haya ninguna caja de texto en blanco.", "Advertencia de datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {                
@@ -139,46 +139,36 @@ namespace Metodo_Euler
                     int n = 0;
                     double xi;
                     double errorabs = 9999999;
-                    while (errorabs != 0)
+                    if (double.Parse(txtXi.Text, CultureInfo.InvariantCulture) == 0)
                     {
-                        if (errorabs == 9999999)
-                        {               
-                            
-                            double ecuacion = Math.Round((Math.Round(Math.Pow(x, 3), 6, MidpointRounding.AwayFromZero) + Math.Round((4 * Math.Pow(x, 2)), 6, MidpointRounding.AwayFromZero) - 10), 6, MidpointRounding.AwayFromZero);           
-                            double ecuacionDerivada = (3 * (Math.Round(Math.Pow(x, 2), 6, MidpointRounding.AwayFromZero)) + (8 * x));               
-                            xi = Math.Round((x - (ecuacion / ecuacionDerivada)), 6, MidpointRounding.AwayFromZero);                                                   
-                            dgvEuler.Rows.Add(
-                            Convert.ToString(n),
-                            Convert.ToString(x),
-                            Convert.ToString(Math.Round(ecuacion, 6, MidpointRounding.AwayFromZero)),
-                            Convert.ToString(Math.Round(ecuacionDerivada, 6, MidpointRounding.AwayFromZero)),
-                            Convert.ToString("No existe"));
-                            errorabs = xi - x;
-                            x = xi;
-                            n++;
-
-                        }
-                        else
+                        DialogResult error = MessageBox.Show("Por favor, ingrese un número mayor que 0", "Advertencia de datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        while (errorabs != 0)
                         {
-                            double ecuacion = Math.Round((Math.Round(Math.Pow(x, 3), 6, MidpointRounding.AwayFromZero) + Math.Round((4 * Math.Pow(x, 2)), 6, MidpointRounding.AwayFromZero) - 10), 6, MidpointRounding.AwayFromZero);                            
-                            double ecuacionDerivada = (3 * (Math.Round(Math.Pow(x, 2), 6, MidpointRounding.AwayFromZero)) + (8 * x));                            
-                            xi = Math.Round((x - (ecuacion / ecuacionDerivada)), 6, MidpointRounding.AwayFromZero);
-                            dgvEuler.Rows.Add(
-                            Convert.ToString(n),
-                            Convert.ToString(Math.Round(x, 6, MidpointRounding.AwayFromZero)),
-                            Convert.ToString(Math.Round(ecuacion, 6, MidpointRounding.AwayFromZero)),
-                            Convert.ToString(Math.Round(ecuacionDerivada, 6, MidpointRounding.AwayFromZero)),
-                            Convert.ToString(Math.Abs(Math.Round(errorabs, 6, MidpointRounding.AwayFromZero))) + "%");
-                            errorabs = xi - x;
-                            x = xi;
-                            n++;
+                            if (errorabs == 9999999)
+                            {               
+                            
+                                double ecuacion = Math.Round((Math.Round(Math.Pow(x, 3), 6, MidpointRounding.AwayFromZero) + Math.Round((4 * Math.Pow(x, 2)), 6, MidpointRounding.AwayFromZero) - 10), 6, MidpointRounding.AwayFromZero);           
+                                double ecuacionDerivada = (3 * (Math.Round(Math.Pow(x, 2), 6, MidpointRounding.AwayFromZero)) + (8 * x));               
+                                xi = Math.Round((x - (ecuacion / ecuacionDerivada)), 6, MidpointRounding.AwayFromZero);                                                   
+                                dgvEuler.Rows.Add(
+                                Convert.ToString(n),
+                                Convert.ToString(x),
+                                Convert.ToString(Math.Round(ecuacion, 6, MidpointRounding.AwayFromZero)),
+                                Convert.ToString(Math.Round(ecuacionDerivada, 6, MidpointRounding.AwayFromZero)),
+                                Convert.ToString("No existe"));
+                                errorabs = xi - x;
+                                x = xi;
+                                n++;
 
-                            if (errorabs == 0)
+                            }
+                            else
                             {
-                                ecuacion = Math.Round((Math.Round(Math.Pow(x, 3), 6, MidpointRounding.AwayFromZero) + Math.Round((4 * Math.Pow(x, 2)), 6, MidpointRounding.AwayFromZero) - 10), 6, MidpointRounding.AwayFromZero);   
-                                ecuacionDerivada = (3 * (Math.Round(Math.Pow(x, 2), 6, MidpointRounding.AwayFromZero)) + (8 * x));
-                                Console.WriteLine("F'(X):  " + ecuacionDerivada);
-                                xi = Math.Round((x - (ecuacion / ecuacionDerivada)), 6, MidpointRounding.AwayFromZero);                     
+                                double ecuacion = Math.Round((Math.Round(Math.Pow(x, 3), 6, MidpointRounding.AwayFromZero) + Math.Round((4 * Math.Pow(x, 2)), 6, MidpointRounding.AwayFromZero) - 10), 6, MidpointRounding.AwayFromZero);                            
+                                double ecuacionDerivada = (3 * (Math.Round(Math.Pow(x, 2), 6, MidpointRounding.AwayFromZero)) + (8 * x));                            
+                                xi = Math.Round((x - (ecuacion / ecuacionDerivada)), 6, MidpointRounding.AwayFromZero);
                                 dgvEuler.Rows.Add(
                                 Convert.ToString(n),
                                 Convert.ToString(Math.Round(x, 6, MidpointRounding.AwayFromZero)),
@@ -186,6 +176,23 @@ namespace Metodo_Euler
                                 Convert.ToString(Math.Round(ecuacionDerivada, 6, MidpointRounding.AwayFromZero)),
                                 Convert.ToString(Math.Abs(Math.Round(errorabs, 6, MidpointRounding.AwayFromZero))) + "%");
                                 errorabs = xi - x;
+                                x = xi;
+                                n++;
+
+                                if (errorabs == 0)
+                                {
+                                    ecuacion = Math.Round((Math.Round(Math.Pow(x, 3), 6, MidpointRounding.AwayFromZero) + Math.Round((4 * Math.Pow(x, 2)), 6, MidpointRounding.AwayFromZero) - 10), 6, MidpointRounding.AwayFromZero);   
+                                    ecuacionDerivada = (3 * (Math.Round(Math.Pow(x, 2), 6, MidpointRounding.AwayFromZero)) + (8 * x));
+                                    Console.WriteLine("F'(X):  " + ecuacionDerivada);
+                                    xi = Math.Round((x - (ecuacion / ecuacionDerivada)), 6, MidpointRounding.AwayFromZero);                     
+                                    dgvEuler.Rows.Add(
+                                    Convert.ToString(n),
+                                    Convert.ToString(Math.Round(x, 6, MidpointRounding.AwayFromZero)),
+                                    Convert.ToString(Math.Round(ecuacion, 6, MidpointRounding.AwayFromZero)),
+                                    Convert.ToString(Math.Round(ecuacionDerivada, 6, MidpointRounding.AwayFromZero)),
+                                    Convert.ToString(Math.Abs(Math.Round(errorabs, 6, MidpointRounding.AwayFromZero))) + "%");
+                                    errorabs = xi - x;
+                                }
                             }
                         }
                     }
